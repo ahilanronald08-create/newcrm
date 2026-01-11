@@ -1,0 +1,96 @@
+{
+  "awarenessChannels": [
+    { "id": 1, "name": "Instagram Ads" },
+    { "id": 2, "name": "Influencer Reel" },
+    { "id": 3, "name": "Direct Visit" },
+    { "id": 4, "name": "Google Search" },
+    { "id": 5, "name": "Reference From Friends" },
+    { "id": 6, "name": "Reference From Family" },
+    { "id": 7, "name": "Reference From Other" },
+    { "id": 8, "name": "Others" }
+  ],
+  "leadStatuses": [
+    { "id": 1, "name": "New" },
+    { "id": 2, "name": "In Progress" },
+    { "id": 3, "name": "Deferred" },
+    { "id": 4, "name": "Converted" },
+    { "id": 5, "name": "Lost" }
+  ],
+  "contactChannels": [
+    { "id": 1, "name": "Phone" },
+    { "id": 2, "name": "Email" },
+    { "id": 3, "name": "In Person" },
+    { "id": 4, "name": "WhatsApp Chat" },
+    { "id": 5, "name": "Instagram Chat" },
+    { "id": 6, "name": "Meta Ads" }
+  ],
+  "stages": [
+    { "id": 1, "name": "To Call" },
+    { "id": 2, "name": "To Visit" },
+    { "id": 3, "name": "Visited" }
+
+  ],
+  "categoryCourses": {
+    "Coding": [
+      "Frontend Development", "Full Stack Development", "Backend Development", "Mobile App Development",
+      "Java Full Stack Development", "Python Full Stack Development", "Mern Stack Development"
+    ],
+    "Data": [
+      "Data Science", "Data Analyst", "Machine Learning"
+    ],
+    "Design": [
+      "UI/UX Designning", "Graphic Designning", "Video Editing", "Digital Marketing"
+    ]
+  },
+  "qualificationDepartments": {
+    "Engineering": ["BE CSE", "BE ECE", "BE EEE", "BE Mechanical", "BE Civil", "BE Mechatronics", "BE Biomedical", "BE AI & DS", "BE IT", "BE Robotics", "BE Agriculture", "BE Marine", "BE Aeronautical", "BE Petroleum", "BE Textile", "BE Environmental", "BE Instrumentation", "Other"],
+    "Diploma": ["Diploma in CSE", "Diploma in ECE", "Diploma in EEE", "Diploma in Mechanical", "Diploma in Civil", "Diploma in Mechatronics", "Diploma in Automobile", "Diploma in Architecture", "Diploma in Textile", "Diploma in Tool & Die", "Diploma in Chemical Engineering", "Diploma in Marine Engineering", "Diploma in Biomedical", "Diploma in Food Technology", "Other"],
+    "Arts & Science": ["BSc Computer Science", "BSc Mathematics", "BSc Physics", "BSc Chemistry", "BSc Psychology", "BSc Microbiology", "BSc Biotechnology", "BSc Visual Communication", "BSc Statistics", "BSc Costume Design", "BCom General", "BCom Accounting & Finance", "BCom Corporate Secretaryship", "BCom Bank Management", "BA English", "BA Tamil", "BA History", "BA Economics", "BA Sociology", "BA Criminology", "BBA", "BCA", "BSc Hotel Management", "Other"],
+    "Postgraduate": ["ME CSE", "ME ECE", "ME Mechanical", "ME Structural", "ME Environmental", "ME VLSI", "MSc Computer Science", "MSc Mathematics", "MSc Physics", "MSc Chemistry", "MSc Psychology", "MA English", "MA Tamil", "MA History", "MA Economics", "MCom", "MBA", "MCA", "MSW (Social Work)", "Other"],
+    "ITI": ["Electrician", "Fitter", "Plumber", "Welder", "Wireman", "Mechanic (Motor Vehicle)", "Refrigeration & AC Technician", "Turner", "Draughtsman Civil", "Draughtsman Mechanical", "Electronics Mechanic", "Other"],
+    "Polytechnic": ["Polytechnic in CSE", "Polytechnic in ECE", "Polytechnic in EEE", "Polytechnic in Mechanical", "Polytechnic in Civil", "Polytechnic in Mechatronics", "Polytechnic in Automobile", "Polytechnic in Textile", "Polytechnic in Chemical", "Polytechnic in Tool & Die", "Other"],
+    "12 th": ["Computer Science", "Biology", "Maths-Biology", "Commerce with Computer Applications", "Commerce with Maths", "Pure Science", "Vocational - Electrical", "Vocational - Mechanical", "Vocational - Agriculture", "Vocational - Fashion Design", "Vocational - Computer Hardware", "Other"],
+    "School": ["10th Standard", "9th Standard", "8th Standard", "7th Standard", "6th Standard", "Below 6th", "Other"],
+    "Others": ["CA (Chartered Accountant)", "CS (Company Secretary)", "ICWA", "Certified Ethical Hacker", "Google Data Analyst Certificate", "AWS Certified Solutions Architect", "Microsoft Azure Fundamentals", "UI/UX Certification", "Spoken English Training", "Digital Marketing Certification", "Other"]
+  },
+  "districts": [
+    { "id": 1, "name": "Ariyalur" },
+    { "id": 2, "name": "Chengalpattu" },
+    { "id": 3, "name": "Chennai" },
+    { "id": 4, "name": "Coimbatore" },
+    { "id": 5, "name": "Cuddalore" },
+    { "id": 6, "name": "Dharmapuri" },
+    { "id": 7, "name": "Dindigul" },
+    { "id": 8, "name": "Erode" },
+    { "id": 9, "name": "Kallakurichi" },
+    { "id": 10, "name": "Kancheepuram" },
+    { "id": 11, "name": "KanniyaKumari" },
+    { "id": 12, "name": "Karur" },
+    { "id": 13, "name": "Krishnagiri" },
+    { "id": 14, "name": "Madurai" },
+    { "id": 15, "name": "Mayiladuthurai" },
+    { "id": 16, "name": "Nagapattinam" },
+    { "id": 17, "name": "Namakkal" },
+    { "id": 18, "name": "Nilgiris" },
+    { "id": 19, "name": "Perambalur" },
+    { "id": 20, "name": "Pudukkottai" },
+    { "id": 21, "name": "Ramanathapuram" },
+    { "id": 22, "name": "Ranipet" },
+    { "id": 23, "name": "Salem" },
+    { "id": 24, "name": "Sivaganga" },
+    { "id": 25, "name": "Tenkasi" },
+    { "id": 26, "name": "Thanjavur" },
+    { "id": 27, "name": "Theni" },
+    { "id": 28, "name": "Thoothukudi" },
+    { "id": 29, "name": "Tiruchirappalli" },
+    { "id": 30, "name": "Tirunelveli" },
+    { "id": 31, "name": "Tirupathur" },
+    { "id": 32, "name": "Tiruppur" },
+    { "id": 33, "name": "Tiruvallur" },
+    { "id": 34, "name": "Tiruvannamalai" },
+    { "id": 35, "name": "Tiruvarur" },
+    { "id": 36, "name": "Vellore" },
+    { "id": 37, "name": "Viluppuram" },
+    { "id": 38, "name": "Virudhunagar" }
+  ]
+}

@@ -114,41 +114,42 @@ const leadSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
-  payment: {
-    course: {
-      type: String,
-      default: "",
-    },
-    courseFee: {
-      type: Number,
-      default: 0,
-    },
-    paymentType: {
-      type: String,
-      enum: ["full", "emi"],
-      default: "full",
-    },
-    months: {
-      type: Number,
-      default: 0,
-    },
-    advance: {
-      type: Number,
-      default: 0,
-    },
-    advanceDate: {
-      type: String,
-      default: "",
-    },
-    advanceTwo: {
-      type: Number,
-      default: 0,
-    },
-    advanceTwoDate: {
-      type: String,
-      default: "",
-    },
-  },
+ // Payment Details
+// payment: {
+//   course: {
+//     type: String,
+//     default: ""
+//   },
+//   courseFee: {
+//     type: Number,
+//     default: 0
+//   },
+//   paymentType: {
+//     type: String,
+//     enum: ["full", "emi"],
+//     default: "full"
+//   },
+//   months: {
+//     type: Number,
+//     default: null
+//   },
+//   advance: {
+//     type: Number,
+//     default: 0
+//   },
+//   advanceDate: {
+//     type: Date,
+//     default: null
+//   },
+//   advanceTwo: {
+//     type: Number,
+//     default: 0
+//   },
+//   advanceTwoDate: {
+//     type: Date,
+//     default: null
+//   }
+// },
 
   // Metadata
   lastupdate: {

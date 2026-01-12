@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const { protect } = require('../middleware/auth');
+
 const {
   createLead,
   getLeads,
@@ -7,22 +9,25 @@ const {
   updateLead,
   deleteLead,
   searchLeads,
-  getDashboardStats  // ✅ ADD THIS
+  getDashboardStats
 } = require('../controllers/leadController');
-const { protect } = require('../middleware/auth');
 
-// All routes are protected
+// 🔐 All routes are protected
 router.use(protect);
+
+// Dashboard
+router.get('/dashboard', getDashboardStats);
+
+// Search
+router.get('/search', searchLeads);
+
+/* ===============================
+   LEAD CRUD
+================================ */
 
 router.route('/')
   .get(getLeads)
   .post(createLead);
-
-router.route('/search')
-  .get(searchLeads);
-
-router.route('/dashboard')  // ✅ ADD THIS ROUTE
-  .get(getDashboardStats);
 
 router.route('/:id')
   .get(getLead)

@@ -56,6 +56,11 @@ const AdditionalInfo = () => {
  const[advanceTwo,setadvanceTwo]=useState()
 const [advanceDate, setAdvanceDate] = useState("");
 const [advanceTwoDate, setAdvanceTwoDate] = useState("");
+const formatAmount = (value) => {
+  if (!value) return "";
+  return Number(value).toLocaleString("en-IN");
+};
+
 const getCurrentDateTime = () => {
   const now = new Date();
 
@@ -67,7 +72,10 @@ const getCurrentDateTime = () => {
 
   return `${year}-${month}-${day}T${hours}:${minutes}`;
 };
-
+const handleAdvanceChange = (e) => {
+  const value = Number(e.target.value || 0);
+  setAdvance(value);
+}
 const isAdvanceTwoEnabled =
   paymentType === "emi" && Number(advance) < 10000;
 
@@ -78,20 +86,21 @@ const isAdvanceTwoEnabled =
     setCourse(e.target.value);
     setfee(selected.fee);
   };
-const handleAdvanceChange = (e) => {
-  const value = Number(e.target.value || 0);
-  setAdvance(value);
 
-  // Only for EMI
-  if (paymentType === "emi" && fee) {
-    if (value < 10000) {
-      const balance = 10000 - value;
-      setadvanceTwo(balance > 0 ? balance : 0);
-    } else {
-      setadvanceTwo("");
-    }
-  }
-};
+// const handleAdvanceChange = (e) => {
+//   const value = Number(e.target.value || 0);
+//   setAdvance(value);
+
+//   // Only for EMI
+//   // if (paymentType === "emi" && fee) {
+//   //   if (value < 10000) {
+//   //     const balance = 10000 - value;
+//   //     setadvanceTwo(balance > 0 ? balance : 0);
+//   //   } else {
+//   //     setadvanceTwo("");
+//   //   }
+//   // }
+// };
 
 const handleAdvanceTwoChange = (e) => {
   const value = Number(e.target.value);
@@ -110,6 +119,12 @@ const handleAdvanceTwoChange = (e) => {
     }
   }
 
+
+// Update the handleFinalSave function in AdditionalInfo component
+// Replace the existing handleFinalSave with this:
+
+// Update the handleFinalSave function in AdditionalInfo component
+// Replace the existing handleFinalSave with this:
 
 const handleFinalSave = async () => {
   try {
@@ -133,32 +148,50 @@ const handleFinalSave = async () => {
       return;
     }
 
-    const payload = {
-      ...leadDraft,
-      ...formData,
-       payment: {
-    course,
-    courseFee: fee,
-    paymentType,
-    months,
-    advance,
-    advanceDate,
-    advanceTwo,
-    advanceTwoDate,
-  },
-    };
-
-    await axios.post(
+    // Save Lead
+    const leadRes = await axios.post(
       "http://localhost:5000/api/leads",
-      payload,
       {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        ...leadDraft,
+        ...formData,
+      },
+      {
+        headers: { Authorization: `Bearer ${token}` },
       }
     );
 
-    setLeadDraft({}); // clear context
+    const leadId = leadRes.data.lead._id;
+
+    // Prepare advanceTwoDate properly
+    let formattedAdvanceTwoDate = null;
+    if (advanceTwo > 0 && advanceTwoDate) {
+      // The advanceTwoDate is in YYYY-MM-DD format from the date input
+      // Convert it to ISO string with time
+      formattedAdvanceTwoDate = new Date(advanceTwoDate + "T00:00:00").toISOString();
+    }
+
+    // Save Payment with proper date handling
+    await axios.post(
+      "http://localhost:5000/api/payments",
+      {
+        leadId,
+        course,
+        courseFee: fee,
+        paymentType,
+        months: paymentType === "emi" ? months : null,
+        advance: advance || 0,
+        advanceTwo: advanceTwo || 0,
+        // Capture current date/time when advance is provided
+        advanceDate: advance > 0 ? new Date().toISOString() : null,
+        // Use the selected date for advance two
+        advanceTwoDate: formattedAdvanceTwoDate,
+      },
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    );
+
+    setLeadDraft({});
     navigate("/dashboard");
   } catch (error) {
     console.error(error);
@@ -166,6 +199,7 @@ const handleFinalSave = async () => {
     setIsInputEmpty(true);
   }
 };
+
 
 
   // Show success alert
@@ -647,7 +681,7 @@ const handleFinalSave = async () => {
                               <TextField
                                   fullWidth
                                   label="Advance Amount (₹)"
-                                  value={advance}
+                                  value={formatAmount(advance)}
                                   disabled={paymentType !== "emi"}
                                   onChange={handleAdvanceChange}
                                   sx={{ mb: 3 }}
@@ -706,8 +740,8 @@ const handleFinalSave = async () => {
                   </Typography>
                   <TextField
                     fullWidth
-                    value={fee}
-                  
+                    value={formatAmount(fee)}
+                    label={fee?"":"course fee"}
                      sx={{ mb: 3 }}
                   />
                   
@@ -731,9 +765,9 @@ const handleFinalSave = async () => {
               </Typography>
                 <TextField
                   fullWidth
-                  value={advanceTwo || ""}
-                  disabled
-                  
+                  value={advanceTwo}
+                  disabled={!isAdvanceTwoEnabled}
+                  onChange={(e)=>setadvanceTwo(e.target.value)}
                   sx={{ mb: 3 }}
                 />
                 <TextField

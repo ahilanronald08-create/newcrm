@@ -831,7 +831,7 @@ export default Follow_Up_Lead;
 //     backgroundColor: "white",
 //     color: "gray",
 //     height: "50px",
-//     width: "150px",
+//     width: "130px",
 //     "& svg": {
 //       marginRight: "6px",
 //     },
@@ -1254,7 +1254,7 @@ export default Follow_Up_Lead;
 // //     backgroundColor: 'white',
 // //     color: 'gray',
 // //     height: '50px',
-// //     width: '150px',
+// //     width: '130px',
 // //     '& svg': {
 // //       marginRight: '6px',
 // //     },
@@ -1800,7 +1800,7 @@ export default Follow_Up_Lead;
 // //     p: 2,
 // //     height:'50px',
 // //     gap:2,
-// //     width:'150px',
+// //     width:'130px',
 
 // //     '& svg': {
 // //       marginRight: '6px',
@@ -2092,7 +2092,7 @@ export default Follow_Up_Lead;
 // //     p: 2,
 // //     height:'50px',
 // //     gap:2,
-// //     width:'150px',
+// //     width:'130px',
 
 // //     '& svg': {
 // //       marginRight: '6px',

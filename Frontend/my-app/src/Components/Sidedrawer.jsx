@@ -24,6 +24,7 @@ import AddReactionOutlinedIcon from '@mui/icons-material/AddReactionOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import PaymentsOutlinedIcon from '@mui/icons-material/PaymentsOutlined';
+import PersonIcon from '@mui/icons-material/Person';
 import LogoutIcon from '@mui/icons-material/Logout';
 import Logos from '../assets/rectangle.jpeg';
 import Logo1 from "../assets/setting.png";
@@ -71,6 +72,7 @@ function ResponsiveDrawer(props) {
     { icon: SearchOutlinedIcon, label: 'Search Lead', path: '/searchlead', color: 'red' },
     { icon: SendOutlinedIcon, label: 'Follow-up', path: '/followuplead', color: 'red' },
     { icon: PaymentsOutlinedIcon, label: 'Sales', path: '/sales', color: 'red' },
+    { icon: PersonIcon, label: 'Attendance', path: '/attendance', color: 'red' }
   ];
 
   const drawerContent = (

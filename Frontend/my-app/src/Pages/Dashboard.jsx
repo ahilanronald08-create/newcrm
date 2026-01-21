@@ -441,7 +441,7 @@ const Dashboard = () => {
       {/* Table - Responsive with horizontal scroll */}
       <Box sx={{ overflowX: "auto", width: "100%" }}>
         <TableContainer component={Paper} sx={{ boxShadow: 2 }}>
-          <Table size="small">
+          <Table size="small" >
             <TableHead sx={{ backgroundColor: "green" }}>
               <TableRow>
                 <TableCell sx={{ color: "white", fontSize: { xs: '11px', sm: '13px' }, fontWeight: 'bold', borderRight: '1px solid rgba(224, 224, 224, 1)' }}>S No</TableCell>
@@ -479,7 +479,7 @@ const Dashboard = () => {
                       <Typography fontWeight="bold" sx={{ fontSize: { xs: '11px', sm: '13px' } }}>
                         {lead.leadStatus || "-"}
                       </Typography>
-                      <Typography variant="caption" sx={{ fontSize: { xs: '10px', sm: '11px' }, color: 'gray' }}>
+                      <Typography variant="caption" sx={{ fontSize: { xs: '10px', sm: '13px' }, color: 'gray' }}>
                         {lead.note || ""}
                       </Typography>
                     </TableCell>
@@ -494,11 +494,11 @@ const Dashboard = () => {
                       {lead.nextFollowUpDate || "-"}
                     </TableCell>
                     <TableCell>
-                      <Typography variant="caption" sx={{ fontSize: { xs: '10px', sm: '11px' } }}>
+                      <Typography variant="caption" sx={{ fontSize: { xs: '10px', sm: '13px' } }}>
                         <span style={{ color: "gray" }}>FCD:</span> {lead.firstContactDate || "-"}
                       </Typography>
                       <br />
-                      <Typography variant="caption" sx={{ fontSize: { xs: '10px', sm: '11px' } }}>
+                      <Typography variant="caption" sx={{ fontSize: { xs: '10px', sm: '13px' } }}>
                         <span style={{ color: "gray" }}>LCD:</span> {lead.lastupdate || "-"}
                       </Typography>
                     </TableCell>
@@ -535,7 +535,7 @@ const Dashboard = () => {
                   <TableCell
                     colSpan={filter.toLowerCase() === "in progress" ? 9 : 8}
                     align="center"
-                    sx={{ fontSize: { xs: '12px', sm: '14px' }, py: 4 }}
+                    sx={{ fontSize: { xs: '12px', sm: '13px' }, py: 4 }}
                   >
                     No leads found for selected filters.
                   </TableCell>
@@ -762,7 +762,7 @@ export default Dashboard;
 //     backgroundColor: "white",
 //     color: "gray",
 //     height: "50px",
-//     width: "150px",
+//     width: "130px",
 //     "& svg": {
 //       marginRight: "6px",
 //     },
@@ -1231,7 +1231,7 @@ export default Dashboard;
 //     backgroundColor: 'white',
 //     color: 'gray',
 //     height: '50px',
-//     width: '150px',
+//     width: '130px',
 //     '& svg': {
 //       marginRight: '6px',
 //     },

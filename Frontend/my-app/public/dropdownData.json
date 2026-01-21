@@ -28,7 +28,6 @@
     { "id": 1, "name": "To Call" },
     { "id": 2, "name": "To Visit" },
     { "id": 3, "name": "Visited" }
-
   ],
   "categoryCourses": {
     "Coding": [
@@ -92,5 +91,49 @@
     { "id": 36, "name": "Vellore" },
     { "id": 37, "name": "Viluppuram" },
     { "id": 38, "name": "Virudhunagar" }
+  ],
+ "banks": [
+  { "id": 1, "name": "State Bank of India (SBI)","icon":"src/assets/sbi.png"},
+  { "id": 2, "name": "Indian Bank" ,"icon":"src/assets/indianbank.png"},
+  { "id": 3, "name": "Indian Overseas Bank" ,"icon":"src/assets/indianoverseas.png"},
+  { "id": 4, "name": "Punjab National Bank (PNB)","icon":"src/assets/Punjabnationalbank.png" },
+  { "id": 5, "name": "Union Bank of India","icon":"src/assets/unionbank.png"},
+  { "id": 6, "name": "Bank of India","icon":"src/assets/Bankofindia.png"},
+  { "id": 7, "name": "Central Bank of India","icon":"src/assets/Centralbankofindia.png" },
+  { "id": 8, "name": "Canara Bank" ,"icon":"src/assets/Canarabank.png"},
+  { "id": 9, "name": "Bank of Baroda","icon":"src/assets/bankofbaroda.png"},
+  { "id": 10, "name": "UCO Bank","icon":"src/assets/ucobank.png"},
+  { "id": 11, "name": "Bank of Maharashtra","icon":"src/assets/bankofmaharashtra.png" },
+
+  { "id": 12, "name": "HDFC Bank" ,"icon":"src/assets/hdfcbank.png"},
+  { "id": 13, "name": "ICICI Bank","icon":"src/assets/icicibank.png"},
+  { "id": 14, "name": "Axis Bank","icon":"src/assets/axisbank.png" },
+  { "id": 15, "name": "Kotak Mahindra Bank","icon":"src/assets/kotak.png" },
+  { "id": 16, "name": "IndusInd Bank","icon":"src/assets/indusind.png" },
+  { "id": 17, "name": "Yes Bank","icon":"src/assets/yesbank.png" },
+  { "id": 18, "name": "IDFC First Bank","icon":"src/assets/idfcfirstbank.jpg" },
+  { "id": 19, "name": "Federal Bank","icon":"src/assets/federalbank.png" },
+  { "id": 20, "name": "South Indian Bank","icon":"src/assets/southindianbank.png" },
+  { "id": 21, "name": "RBL Bank","icon":"src/assets/rblbank.png" },
+  { "id": 22, "name": "Bandhan Bank","icon":"src/assets/bandhanbank.png" },
+  { "id": 23, "name": "CSB Bank","icon":"src/assets/csbbank.png" },
+
+  { "id": 24, "name": "City Union Bank","icon":"src/assets/cityunionbank.png" },
+  { "id": 25, "name": "Karur Vysya Bank","icon":"src/assets/karurvysyabank.png" },
+  { "id": 26, "name": "Tamilnad Mercantile Bank","icon":"src/assets/tamilnadumercantilebank.png" },
+
+  { "id": 27, "name": "AU Small Finance Bank","icon":"src/assets/Aubank.png" },
+  { "id": 28, "name": "Equitas Small Finance Bank","icon":"src/assets/equitas.webp" },
+  { "id": 29, "name": "Ujjivan Small Finance Bank","icon":"src/assets/ujjivan.jpg" },
+  { "id": 30, "name": "ESAF Small Finance Bank","icon":"src/assets/esafbank.png" },
+
+  { "id": 31, "name": "HSBC Bank","icon":"src/assets/hsbcbank.png" },
+  { "id": 32, "name": "Standard Chartered Bank","icon":"src/assets/standardbank.png" }
+],
+  "upiApps": [
+    { "id": 1, "name": "Google Pay", "icon": "src/assets/gpay.jpg" },
+    { "id": 2, "name": "PhonePe", "icon": "src/assets/phonepe-icon.webp" },
+    { "id": 3, "name": "Paytm", "icon": "src/assets/paytm.png" }
   ]
+  
 }

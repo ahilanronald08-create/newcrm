@@ -21,9 +21,7 @@ router.get('/dashboard', getDashboardStats);
 // Search
 router.get('/search', searchLeads);
 
-/* ===============================
-   LEAD CRUD
-================================ */
+
 
 router.route('/')
   .get(getLeads)

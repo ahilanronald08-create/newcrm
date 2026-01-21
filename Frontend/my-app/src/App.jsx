@@ -11,6 +11,7 @@ import Follow_Up_Lead from './Pages/Follow_Up_lead';
 import Auth from "./Components/Auth";
 import Sales from "../src/Pages/Sales"
 import Payment from './Components/Payment';
+import EmployeeAttendance from './Pages/EmployeeAttendance';
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem('token');
   
@@ -79,7 +80,6 @@ const App = () => {
             </Sidedrawer>
           </PrivateRoute>
         } />
-        
         <Route path="/additional" element={
           <PrivateRoute>
             <Sidedrawer>
@@ -107,6 +107,13 @@ const App = () => {
           <PrivateRoute>
             <Sidedrawer>
               <Sales />
+            </Sidedrawer>
+          </PrivateRoute>
+        } />
+         <Route path="/Attendance" element={
+          <PrivateRoute>
+            <Sidedrawer>
+              <EmployeeAttendance />
             </Sidedrawer>
           </PrivateRoute>
         } />
